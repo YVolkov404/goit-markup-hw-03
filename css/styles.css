@@ -3,7 +3,7 @@
   /*? CUSTOM PROPERTIES
   /*! ++++++++++++++++++++++++++++ */
 
-  /**  FIXME: 
+  /*? [x]: 
   /*! logo color  */
   --brand-logo-color: #4d5ae5;
 
@@ -26,7 +26,7 @@
   --portfolio-project-item-bg-color: #ffffff;
 
   /*  todo:
-  /** button colors : text & background */
+  /** button colors : text, bg & borders */
   --main-btn-font-color: #ffffff;
   --studio-btn-bg-color: #4d5ae5;
   --studio-btn-bg-color-hover: #404bbf;
@@ -44,21 +44,10 @@ body {
   color: var(--body-text-color);
   font-family: "Roboto", sans-serif;
 }
-.visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-.logo {
-  color: var(--brand-logo-color);
-}
+
+/* todo: reset default browser styles
+? smth like normalize.css */
+
 p,
 h1,
 h2,
@@ -84,23 +73,32 @@ img {
 .link {
   text-decoration: none;
 }
-.features-item-title,
-.team-item-title,
-.projects-item-title {
-  color: var(--headings-color);
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
+
+/* todo: to hide title elements
+? css trick */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
-.address-link,
-.features-item-text,
-.team-item-text,
-.project-item-text,
-.footer-text {
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1158px;
+}
+.logo {
+  display: inline-block;
+  color: var(--brand-logo-color);
 }
 .btn {
   border-radius: 4px;
@@ -114,11 +112,29 @@ img {
   min-width: 169px;
   padding: 16px 32px;
 }
-.container {
-  display: flex;
-  margin: 0 auto;
-  padding-inline: 15px;
-  width: 1158px;
+
+/* todo: titels
+! refact [those classes have got the same properties] */
+.features-item-title,
+.team-item-title,
+.projects-item-title {
+  color: var(--headings-color);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+/* todo: link & text
+! refact [those classes have got the same properties] */
+.address-link,
+.features-item-text,
+.team-item-text,
+.project-item-text,
+.footer-text {
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
 }
 
 /*! +++++++++++++++++++++++++++++++
@@ -126,18 +142,25 @@ img {
 /*! ++++++++++++++++++++++++++++ */
 
 .header {
+  padding: 24px 0;
   border-bottom: 1px solid #e7e9fc;
 }
 .header-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  padding-block: 24px;
 }
+
+/*? todo: Navigation */
+
 .nav {
   align-items: center;
   display: flex;
 }
+
+/* todo: logo
+! refact [.footer-logo has the same properies] */
+
 .nav-logo,
 .footer-logo {
   display: inline-block;
@@ -149,6 +172,7 @@ img {
   text-transform: uppercase;
 }
 .nav-logo {
+  margin-right: 76px;
   color: var(--header-text-color);
 }
 .nav-link {
@@ -166,27 +190,29 @@ img {
 .nav-list {
   display: flex;
   gap: 40px;
-  margin-left: 76px;
 }
+
+/*? todo: Address */
+
 .address {
   margin-left: auto;
 }
 .address-list {
   display: flex;
   font-style: normal;
-}
-.address-item:last-child {
-  margin-left: 40px;
+  gap: 40px;
 }
 .address-link {
   color: var(--body-text-color);
 }
 
 /*! +++++++++++++++++++++++++++++++
+/** STUDIO PAGE
+/*! -------------------------------
 /*? MAIN
 /*! ++++++++++++++++++++++++++++ */
 
-/*? FIXME:
+/*? TODO:
 /********** Hero section *********/
 
 .hero {
@@ -196,7 +222,7 @@ img {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 188px 472px;
+  padding: 188px 0;
 }
 .hero-title {
   color: var(--main-titles-color);
@@ -205,9 +231,10 @@ img {
   letter-spacing: 0.02em;
   line-height: 1.07;
   margin-bottom: 48px;
-  width: 496px;
+  max-width: 496px;
 }
 .hero-btn {
+  border: none;
   background-color: var(--studio-btn-bg-color);
   color: var(--main-btn-font-color);
 }
@@ -216,26 +243,37 @@ img {
   background-color: var(--studio-btn-bg-color-hover);
 }
 
-/*? FIXME:
+/*? TODO:
 /****** Features section *******/
 
+.features {
+  padding: 120px 0;
+}
 .features-list {
   display: flex;
-  gap: 22px;
-  padding-block: 120px;
+  gap: 24px;
+}
+.features-item {
+  width: calc((100% - 3 * 24px) / 4);
 }
 .features-item-title {
   margin-bottom: 8px;
 }
 
-/*? FIXME:
-/***** About & Team sections *****/
+/*? TODO:
+/***** About section *****/
 
+.about {
+  padding-bottom: 120px;
+}
 .about-container {
   display: flex;
   flex-direction: column;
-  padding-bottom: 120px;
 }
+
+/* todo: refact
+! [.team-title has the same properies] */
+
 .about-title,
 .team-title {
   color: var(--headings-color);
@@ -250,14 +288,18 @@ img {
   display: flex;
   gap: 24px;
 }
+
+/*? TODO:
+/***** Team section *****/
+
 .team {
   background-color: var(--team-bg-color);
+  padding: 120px 0;
 }
 .team-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  padding-block: 120px;
 }
 .team-list {
   display: flex;
@@ -265,6 +307,8 @@ img {
   gap: 24px;
 }
 .team-item {
+  width: calc((100% - 3 * 24px) / 4);
+  border-radius: 0 0 4px 4px;
   background-color: var(--team-item-bg-color);
   text-align: center;
 }
@@ -280,79 +324,83 @@ img {
 /*! ++++++++++++++++++++++++++++ */
 
 .footer {
+  padding: 100px 0;
   background-color: var(--footer-bg-color);
 }
 .footer-container {
   flex-direction: column;
-  padding: 112px 0 100px 156px;
-}
-.footer-text {
-  margin-top: 27px;
-  width: 264px;
 }
 .footer-logo,
 .footer-text {
   color: var(--footer-text-color);
-  display: inline;
+}
+.footer-logo {
+  margin-bottom: 16px;
+}
+.footer-text {
+  max-width: 264px;
 }
 
 /*! +++++++++++++++++++++++++++++++
-/*? PORTFOLIO PAGE
-/*! ===============================
+/** PORTFOLIO PAGE
+/*! -------------------------------
 /*? MAIN
 /*! ++++++++++++++++++++++++++++ */
 
-/*? FIXME:
+/*? TODO:
 /******* Projects sections *******/
 
 .projects-container {
   display: flex;
   flex-direction: column;
+  padding-top: 96px;
+  padding-bottom: 120px;
 }
+
+/*? todo: Buttons */
+
 .projects-btn-container {
   display: flex;
   justify-content: center;
-  padding-bottom: 72px;
-  padding-top: 168px;
+  margin-bottom: 72px;
 }
 .projects-btn-list {
   display: flex;
-  flex-direction: row;
   gap: 24px;
 }
 .projects-btn {
+  padding: 12px 24px;
   background-color: var(--portfolio-btn-bg-color);
   border: 1px solid var(--portfolio-item-border-color);
   color: var(--portfolio-btn-font-color);
 }
 .projects-btn:hover,
 .projects-btn:focus {
+  border: 1px solid transparent;
   background-color: var(--portfolio-btn-bg-color-hover);
   color: var(--main-btn-font-color);
 }
+
+/*? todo: Cards */
+
 .projects-list-container {
   display: flex;
-  padding-bottom: 120px;
 }
 .projects-list {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin-left: -24px;
-  margin-top: -48px;
+  column-gap: 24px;
+  row-gap: 48px;
 }
 .projects-list-item {
   border: 1px solid var(--portfolio-item-border-color);
-  margin-left: 24px;
-  margin-top: 48px;
-  width: calc(100% / 3 - 24px);
-}
-.projects-item-desc {
-  padding: 32px 0 32px 16px;
-}
-.projects-item-link {
+  border-top: none;
+  width: calc((100% - 48px) / 3);
   background-color: var(--portfolio-project-item-bg-color);
   color: var(--body-text-color);
+}
+.projects-item-desc {
+  padding: 32px 16px;
 }
 .projects-item-title {
   margin-bottom: 8px;

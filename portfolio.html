@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.css"
-        integrity="sha512-gA2Bvu0/hw4oj0Lp8ZHjK+o3S4BE5m8d/wNVy6ktKLhHKPpWLQwv9ixzuWirWOakoJqlBdePq2NhoCaUOQ5npQ=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,11 +23,11 @@
     !----------------------------------->
     <header class="header">
 
-        <!-- [FIXME:] Flex container 
-    todo !-------------------------------->
+        <!-- HACK: Flex container 
+        todo !-------------------------------->
         <div class="container header-container">
 
-            <!-- BUG: Navigation -->
+            <!-- XXX: Navigation -->
             <nav class="nav">
 
                 <!-- ? Logo _> Brand -->
@@ -48,8 +48,7 @@
 
             </nav>
 
-            <!-- ? Contacts list
-       *-------------------------------->
+            <!-- XXX: Address -->
             <address class="address">
                 <ul class="address-list list">
                     <li class="address-item"><a class="address-link link" href="mailto:info@devstudio.com"
@@ -69,43 +68,55 @@
     <!-- !===============================
     TODO: MAIN
     !----------------------------------->
-    <main>
+    <main class="main">
 
         <!-- FIXME: Projects -->
         <section class="projects">
+
             <div class="projects-container container">
 
-                <!-- [FIXME:] Flex container  
-                todo:!-------------------------------->
+                <!-- HACK: Flex container  
+                todo: !-------------------------------->
                 <h1 class="projects-title visually-hidden">Projects</h1>
                 <div class="projects-btn-container container">
 
-                    <!-- ? Project list buttons -->
+                    <!-- XXX: Buttons list -->
                     <ul class="projects-btn-list list">
-                        <li class="projects-item">
+
+                        <!-- [x]: Button -->
+                        <li class="projects-item-btn">
                             <button class="projects-btn btn" type="button">All</button>
                         </li>
-                        <li class="projects-item">
-                            <button class="projects-btn btn" type="button">Web Site</btn>
+
+                        <!-- [x]: Button -->
+                        <li class="projects-item-btn">
+                            <button class="projects-btn btn" type="button">Web Site</button>
                         </li>
-                        <li class="projects-item">
-                            <button class="projects-btn btn" type="button">App</btn>
+
+                        <!-- [x]: Button -->
+                        <li class="projects-item-btn">
+                            <button class="projects-btn btn" type="button">App</button>
                         </li>
-                        <li class="projects-item">
-                            <button class="projects-btn btn" type="button">Design</btn>
+
+                        <!-- [x]: Button -->
+                        <li class="projects-item-btn">
+                            <button class="projects-btn btn" type="button">Design</button>
                         </li>
-                        <li class="projects-item">
-                            <button class="projects-btn btn" type="button">Marketing</btn>
+
+                        <!-- [x]: Button -->
+                        <li class="projects-item-btn">
+                            <button class="projects-btn btn" type="button">Marketing</button>
                         </li>
                     </ul>
                 </div>
 
-                <!-- [FIXME:] Flex container  
+                <!-- HACK: Flex container  
                 todo:!-------------------------------->
                 <div class="projects-list-container container">
 
-                    <!-- ? Project list cards -->
+                    <!-- XXX: Cards list -->
                     <ul class="projects-list list">
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-1.jpg"
@@ -116,6 +127,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-2.jpg"
@@ -126,6 +138,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-3.jpg"
@@ -136,6 +149,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-4.jpg"
@@ -146,6 +160,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-5.jpg"
@@ -156,6 +171,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-6.jpg"
@@ -166,6 +182,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-7.jpg"
@@ -176,6 +193,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-8.jpg"
@@ -186,6 +204,7 @@
                                 </div>
                             </a>
                         </li>
+                        <!-- [x]: Card -->
                         <li class="projects-list-item">
                             <a class="projects-item-link link" href="">
                                 <img class="projects-item-img" src="./images/porfolio/porfolio-img-9.jpg"
@@ -208,7 +227,7 @@
     !----------------------------------->
     <footer class="footer">
 
-        <!-- [FIXME:] Flex container 
+        <!-- HACK: Flex container 
     todo !-------------------------------->
         <div class="container footer-container">
 
