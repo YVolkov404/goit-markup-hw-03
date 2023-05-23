@@ -100,13 +100,14 @@ img {
 }
 .container {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
   padding: 0 15px;
   width: 1158px;
 }
 .logo {
-  display: inline-block;
   color: var(--brand-logo-color);
+  display: inline-block;
 }
 .btn {
   border-radius: 4px;
@@ -171,17 +172,17 @@ img {
 .nav-logo,
 .footer-logo {
   display: block;
-  padding: 24px 0;
   font-family: "Raleway";
   font-size: 18px;
   font-weight: 800;
   letter-spacing: 0.03em;
   line-height: 1.17px;
+  padding: 24px 0;
   text-transform: uppercase;
 }
 .nav-logo {
-  margin-right: 76px;
   color: var(--header-text-color);
+  margin-right: 76px;
 }
 .nav-link {
   color: var(--links-color);
@@ -212,9 +213,9 @@ img {
   gap: 40px;
 }
 .address-link {
+  color: var(--body-text-color);
   display: block;
   padding: 24px 0;
-  color: var(--body-text-color);
 }
 
 /*! +++++++++++++++++++++++++++++++
@@ -245,8 +246,8 @@ img {
   max-width: 496px;
 }
 .hero-btn {
-  border: none;
   background-color: var(--studio-btn-bg-color);
+  border: none;
   color: var(--main-btn-font-color);
 }
 .hero-btn:hover,
@@ -311,10 +312,10 @@ img {
   gap: 24px;
 }
 .team-item {
-  width: calc((100% - 3 * 24px) / 4);
-  border-radius: 0 0 4px 4px;
   background-color: var(--team-item-bg-color);
+  border-radius: 0 0 4px 4px;
   text-align: center;
+  width: calc((100% - 3 * 24px) / 4);
 }
 .team-item-desc {
   padding: 32px 16px;
@@ -328,8 +329,8 @@ img {
 /*! ++++++++++++++++++++++++++++ */
 
 .footer {
-  padding: 100px 0;
   background-color: var(--footer-bg-color);
+  padding: 100px 0;
 }
 .footer .container {
   display: block;
@@ -355,57 +356,52 @@ img {
 /******* Projects sections *******/
 
 .projects {
-  padding-top: 96px 0 120px 0;
+  padding-top: 96px;
 }
 .projects-container {
   flex-direction: column;
-}
-.projects-btn-container {
-  justify-content: center;
 }
 
 /*? todo: Buttons */
 
 .projects-btn-list {
   display: flex;
-  align-items: center;
   gap: 24px;
+  justify-content: center;
   margin: 72px 0;
 }
 .projects-btn {
-  min-width: auto;
-  padding: 12px 24px;
-  border-radius: 4px;
   background-color: var(--portfolio-btn-bg-color);
   border: 1px solid var(--portfolio-item-border-color);
   color: var(--portfolio-btn-font-color);
+  min-width: auto;
+  padding: 12px 24px;
 }
 .projects-btn:hover,
 .projects-btn:focus {
-  border: 1px solid transparent;
   background-color: var(--portfolio-btn-bg-color-hover);
+  border: 1px solid transparent;
   color: var(--main-btn-font-color);
 }
 
 /*? todo: Cards */
 
 .projects-list {
+  column-gap: 24px;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
   row-gap: 48px;
 }
 .projects-list-item {
-  border-top: none;
-  width: calc((100% - 48px) / 3);
   background-color: var(--portfolio-project-item-bg-color);
   color: var(--body-text-color);
-  margin-left: 0;
+  width: calc((100% - 48px) / 3);
 }
 .projects-item-desc {
   border: 1px solid var(--portfolio-item-border-color);
-  padding: 32px 16px;
+  border-top: none;
   color: var(--body-text-color);
+  padding: 32px 16px;
 }
 .projects-item-title {
   margin-bottom: 8px;
