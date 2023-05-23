@@ -328,15 +328,14 @@ img {
   background-color: var(--footer-bg-color);
 }
 .footer-container {
-  display: inline-block;
   flex-direction: column;
 }
 .footer-logo,
 .footer-text {
+  display: inline-block;
   color: var(--footer-text-color);
 }
 .footer-logo {
-  display: inline-block;
   margin-bottom: 16px;
 }
 .footer-text {
