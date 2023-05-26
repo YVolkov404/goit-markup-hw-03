@@ -62,19 +62,23 @@ h5,
 h6 {
   margin: 0;
 }
+
 ul,
 ol {
   margin: 0;
   padding: 0;
 }
+
 img {
   display: block;
   height: auto;
   max-width: 100%;
 }
+
 .list {
   list-style: none;
 }
+
 .link {
   text-decoration: none;
 }
@@ -98,6 +102,7 @@ img {
 .section {
   padding: 120px 0;
 }
+
 .container {
   display: flex;
   justify-content: center;
@@ -105,10 +110,12 @@ img {
   padding: 0 15px;
   width: 1158px;
 }
+
 .logo {
   color: var(--brand-logo-color);
   display: inline-block;
 }
+
 .btn {
   border-radius: 4px;
   cursor: pointer;
@@ -153,6 +160,7 @@ img {
 .header {
   border-bottom: 1px solid #e7e9fc;
 }
+
 .header-container {
   align-items: center;
   display: flex;
@@ -180,10 +188,12 @@ img {
   padding: 24px 0;
   text-transform: uppercase;
 }
+
 .nav-logo {
   color: var(--header-text-color);
   margin-right: 76px;
 }
+
 .nav-link {
   color: var(--links-color);
   display: block;
@@ -193,10 +203,12 @@ img {
   line-height: 1.5;
   padding: 24px 0;
 }
+
 .nav-link:hover,
 .nav-link:focus {
   color: var(--links-color-hover);
 }
+
 .nav-list {
   display: flex;
   gap: 40px;
@@ -207,11 +219,13 @@ img {
 .address {
   margin-left: auto;
 }
+
 .address-list {
   display: flex;
   font-style: normal;
   gap: 40px;
 }
+
 .address-link {
   color: var(--body-text-color);
   display: block;
@@ -231,11 +245,13 @@ img {
   background-color: var(--hero-bg-color);
   padding: 188px 0;
 }
+
 .hero-container {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
+
 .hero-title {
   color: var(--main-titles-color);
   font-size: 56px;
@@ -245,11 +261,13 @@ img {
   margin-bottom: 48px;
   max-width: 496px;
 }
+
 .hero-btn {
   background-color: var(--studio-btn-bg-color);
   border: none;
   color: var(--main-btn-font-color);
 }
+
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: var(--studio-btn-bg-color-hover);
@@ -262,15 +280,21 @@ img {
   display: flex;
   gap: 24px;
 }
+
 .features-item {
   width: calc((100% - 3 * 24px) / 4);
 }
+
 .features-item-title {
   margin-bottom: 8px;
 }
 
 /*? TODO:
 /***** About section *****/
+
+.about {
+  padding-top: 0;
+}
 
 .about-container {
   display: flex;
@@ -290,6 +314,7 @@ img {
   text-align: center;
   text-transform: capitalize;
 }
+
 .about-list {
   display: flex;
   gap: 24px;
@@ -301,25 +326,30 @@ img {
 .team {
   background-color: var(--team-bg-color);
 }
+
 .team-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
 }
+
 .team-list {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
+
 .team-item {
   background-color: var(--team-item-bg-color);
   border-radius: 0 0 4px 4px;
   text-align: center;
   width: calc((100% - 3 * 24px) / 4);
 }
+
 .team-item-desc {
   padding: 32px 16px;
 }
+
 .team-item-title {
   margin-bottom: 8px;
 }
@@ -332,17 +362,21 @@ img {
   background-color: var(--footer-bg-color);
   padding: 100px 0;
 }
+
 .footer .container {
   display: block;
 }
+
 .footer-logo,
 .footer-text {
   color: var(--footer-text-color);
 }
+
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
 }
+
 .footer-text {
   max-width: 264px;
 }
@@ -359,6 +393,7 @@ img {
 .projects {
   padding-top: 96px;
 }
+
 .projects-container {
   flex-direction: column;
 }
@@ -369,8 +404,9 @@ img {
   display: flex;
   gap: 24px;
   justify-content: center;
-  margin: 72px 0;
+  margin-bottom: 72px;
 }
+
 .projects-btn {
   background-color: var(--portfolio-btn-bg-color);
   border: 1px solid var(--portfolio-item-border-color);
@@ -378,6 +414,7 @@ img {
   min-width: auto;
   padding: 12px 24px;
 }
+
 .projects-btn:hover,
 .projects-btn:focus {
   background-color: var(--portfolio-btn-bg-color-hover);
@@ -393,17 +430,20 @@ img {
   flex-wrap: wrap;
   row-gap: 48px;
 }
+
 .projects-list-item {
   background-color: var(--portfolio-project-item-bg-color);
   color: var(--body-text-color);
   width: calc((100% - 48px) / 3);
 }
+
 .projects-item-desc {
   border: 1px solid var(--portfolio-item-border-color);
   border-top: none;
   color: var(--body-text-color);
   padding: 32px 16px;
 }
+
 .projects-item-title {
   margin-bottom: 8px;
 }
